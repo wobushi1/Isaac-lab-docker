@@ -1,0 +1,9 @@
+.git
+.DS_Store
+*.tar
+*.tar.gz
+*.log
+__pycache__/
+build/
+install/
+log/
