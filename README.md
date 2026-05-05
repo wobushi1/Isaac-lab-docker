@@ -94,6 +94,30 @@ docker build \
   .
 ```
 
+## 4.1 直接使用别人打好的镜像
+
+如果你拿到的不是源码构建流程，而是一个已经导出的 Docker 镜像文件，例如：
+
+```text
+isaac-lab-ros2-2.1.0-humble.tar
+```
+
+先导入本地：
+
+```bash
+docker load -i isaac-lab-ros2-2.1.0-humble.tar
+```
+
+导入完成后，就可以直接跳到“本地运行”或“镜像冒烟测试”章节继续使用，不需要重新执行 `./scripts/build.sh`。
+
+如果别人提供的是镜像仓库地址，而不是 `tar` 文件，也可以直接拉取：
+
+```bash
+docker pull <registry/image:tag>
+```
+
+然后同样按下面的运行和测试步骤继续。
+
 ## 5. 切换为 Isaac Sim 底座
 
 如果只想基于 Isaac Sim 官方镜像，不使用 Isaac Lab 官方镜像：
